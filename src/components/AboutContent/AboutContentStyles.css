@@ -1,0 +1,43 @@
+.about {
+  width: 100%;
+  margin: 3rem 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  height: 100%;
+}
+
+.about .left {
+  text-align: left;
+  margin: auto;
+  padding: 1rem;
+  max-width: 550px;
+}
+
+.about .left p {
+  margin: 1.2rem 0;
+}
+
+.about .right {
+  margin: auto;
+  max-width: 700px;
+  text-align: center;
+  border-radius: 15%;
+  background-color: #333;
+}
+
+.right .img-container {
+  display: grid;
+  margin: 1rem;
+  grid-gap: 15px;
+  grid-template-columns: repeat(4, 1fr);
+  position: relative;
+  align-items: center;
+  text-align: center;
+}
+
+.right .img {
+  max-width: 90%;
+  border: 1px solid #333;
+}
