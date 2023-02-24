@@ -24,7 +24,11 @@
   max-width: 700px;
   text-align: center;
   border-radius: 15%;
-  background-color: #333;
+  background-color: #f1f1f184;
+}
+
+.about .right h2 {
+  color: #040404
 }
 
 .right .img-container {
