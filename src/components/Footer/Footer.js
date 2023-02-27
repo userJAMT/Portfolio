@@ -52,7 +52,7 @@ function Footer() {
                 style={{ color: "#fff", marginRight: "2rem" }}
               />
             </NavLink>
-            <NavLink to="https://www.linkedin.com/in/jose-andres-mendez-torres-6215b6150/">
+            <NavLink to="https://www.linkedin.com/in/userjamt/">
               <FaLinkedin
                 size={30}
                 style={{ color: "#fff", marginRight: "2rem" }}
