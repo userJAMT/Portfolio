@@ -8,6 +8,10 @@
   height: 90px;
   z-index: 10;
 }
+.header-container {
+  display: flex;
+  justify-content: space-between;
+}
 .header-bg {
   background-color: rgba(0, 0, 0, 0.85);
   transition: 0.5s;
@@ -24,6 +28,20 @@
 }
 .hamburger {
   display: none;
+  margin-left: 1rem;
+}
+.flags {
+  padding: 5px;
+  background-color: #f1f1f129;
+  border-radius: 30px;
+  position: absolute;
+  left: 50%;
+}
+.flags-items {
+  display: flex;
+}
+.flags .flags-items img {
+  margin: 1px 5px;
 }
 
 @media screen and (max-width: 1040px) {

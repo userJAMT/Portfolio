@@ -22,13 +22,14 @@
 .about .right {
   margin: auto;
   max-width: 700px;
+  width: 50vh;
   text-align: center;
   border-radius: 15%;
   background-color: #f1f1f184;
 }
 
 .about .right h2 {
-  color: #040404
+  color: #040404;
 }
 
 .right .img-container {
@@ -42,6 +43,12 @@
 }
 
 .right .img {
-  max-width: 90%;
+  width: 10rem;
   border: 1px solid #333;
+}
+
+@media screen and (max-width: 740px) {
+  .about .right {
+    margin: auto 0.8rem
+  }
 }

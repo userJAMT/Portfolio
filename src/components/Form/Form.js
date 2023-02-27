@@ -1,15 +1,24 @@
 import "./FormStyles.css";
 
-import React, { useRef, useState } from "react";
+import React, { useContext, useRef, useState } from "react";
 import emailjs from "@emailjs/browser";
+import { ThemeContext } from "../../context";
 
 const Result = () => {
+  const theme = useContext(ThemeContext);
+  const { language } = theme.state;
   return (
-    <p>Tu mensaje ha sido enviado satisfactoriamente. Te contactaré pronto.</p>
+    <p>
+      {language === "EN"
+        ? "Message sent successfully. I'll contact you soon."
+        : "Tu mensaje ha sido enviado satisfactoriamente. Te contactaré pronto."}
+    </p>
   );
 };
 
 const Form = () => {
+  const theme = useContext(ThemeContext);
+  const { language } = theme.state;
   const form = useRef();
   const [result, showResult] = useState(false);
 
@@ -42,15 +51,27 @@ const Form = () => {
 
   return (
     <form ref={form} onSubmit={sendEmail}>
-      <label>Nombre</label>
+      <label>{language === "EN" ? "Name" : "Nombre"}</label>
       <input type="text" name="user_name" required />
       <label>Email</label>
       <input type="email" name="user_email" required />
-      <label>Tema</label>
+      <label>{language === "EN" ? "Subject" : "Tema"}</label>
       <input type="text" name="subject" required />
-      <label>Mensaje</label>
-      <textarea name="message" placeholder="Escribe tu mensaje aquí" required />
-      <input className="btn" type="submit" value="Enviar" />
+      <label>{language === "EN" ? "Message" : "Mensaje"}</label>
+      <textarea
+        name="message"
+        placeholder={
+          language === "EN"
+            ? "Write your message here"
+            : "Escribe tu mensaje aquí"
+        }
+        required
+      />
+      <input
+        className="btn"
+        type="submit"
+        value={language === "EN" ? "Submit" : "Enviar"}
+      />
       <div className="row">{result ? <Result /> : null}</div>
     </form>
   );

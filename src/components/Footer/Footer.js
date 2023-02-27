@@ -40,11 +40,6 @@ function Footer() {
           </div>
         </div>
         <div className="right">
-          <h4>Sobre mi</h4>
-          <p>
-            Soy un programador Fullstack graduado de SoyHenry y estudiante de
-            ingeniería electrónica.
-          </p>
           <div className="social">
             <NavLink to="https://github.com/userJAMT">
               <FaGithub

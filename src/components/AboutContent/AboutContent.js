@@ -1,27 +1,44 @@
 import "./AboutContentStyles.css";
-import React from "react";
+import React, { useContext } from "react";
 import { Link } from "react-router-dom";
+import { ThemeContext } from "../../context";
 
 function AboutContent() {
+  const theme = useContext(ThemeContext);
+  const { language } = theme.state;
+
   return (
     <div className="about">
       <div className="left">
-        <h1>¿Quién soy?</h1>
-        <p>
-          Soy un Programador Web Full Stack graduado de SoyHenry, apasionado por
-          la ciencia y la tecnología desde pequeño he estado aprendiendo durante
-          muchos años, ganando muy buenas cualidades para resolver problemas de
-          forma óptima y eficaz. Ahora adentrandome en el mundo de la
-          programación como Full Stack estoy listo para afrontar los nuevos
-          retos con ganas de aprender y darlo todo.
-        </p>
+        <h1>{language === "EN" ? "Who am I?" : "¿Quién soy?"}</h1>
+        {language === "EN" ? (
+          <p>
+            I am a Full Stack Developer graduated from soyHenry and electronic
+            engineering student. At the middle of my career I was opting for the
+            computational branch of it. Now I decided to enter in the world of
+            programming to learn and generate new experiences that will help me
+            in the future to combine my new and my old passion.
+          </p>
+        ) : (
+          <p>
+            Soy un Programador Web Full Stack graduado de SoyHenry, apasionado
+            por la ciencia y la tecnología desde pequeño he estado aprendiendo
+            durante muchos años, ganando muy buenas cualidades para resolver
+            problemas de forma óptima y eficaz. Ahora adentrandome en el mundo
+            de la programación como Full Stack estoy listo para afrontar los
+            nuevos retos con ganas de aprender y darlo todo.
+          </p>
+        )}
+
         <Link to="/contact">
-          <button className="btn">Contact</button>
+          <button className="btn">
+            {language === "EN" ? "Contact" : "Contacto"}
+          </button>
         </Link>
       </div>
 
       <div className="right">
-        <h2>Las tecnologías que manejo:</h2>
+        <h2> {language === "EN" ? "Technologies" : "Tecnologías"}</h2>
         <div className="img-container">
           <img
             src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original-wordmark.svg"
