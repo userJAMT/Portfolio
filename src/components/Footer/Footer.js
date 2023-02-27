@@ -52,7 +52,7 @@ function Footer() {
                 style={{ color: "#fff", marginRight: "2rem" }}
               />
             </NavLink>
-            <NavLink to="https://www.linkedin.com/in/userjamt/">
+            <NavLink to="https://www.linkedin.com/in/userjamt/?locale=en_US">
               <FaLinkedin
                 size={30}
                 style={{ color: "#fff", marginRight: "2rem" }}
