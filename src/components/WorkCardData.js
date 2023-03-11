@@ -8,7 +8,7 @@ const projectCardData = [
     text: "Colaboración en equipo bajo la metodología SCRUM para el desarrollo de un e-commerce con diseño responsive, donde se muestra un catálogo con distintos productos. Posee un carro de compras, autenticación por email y Google, pago con tarjeta de crédito, mailing y dashboard de admin para gestionar usuarios, ventas y productos",
     textEn:
       "Team collaboration under the SCRUM methodology for the development of an e-commerce with responsive design, where different products are cataloged. It has a shopping cart, email and Google authentication, credit card payment, mailing and admin dashboard to manage users, sales and products.",
-    view: "https://tech-e-commerce.vercel.app/",
+    view: "https://tech-e-commerce-jam.vercel.app/",
     source: "https://github.com/ricgomez99/Tech-e.commerce",
   },
   {
